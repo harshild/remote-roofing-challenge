@@ -1,26 +1,42 @@
 <template>
     <div class="container-header">
         <div class="content">
-            <div class="logo">
-                <a href="http://remoteroofing.com">
-                    <img src="https://uploads-ssl.webflow.com/5f127ac8860f158e650f06b5/5f12985a91b23596370f7a81_logo-72-dc-7-f-0-f%402x.png" height="50" >
-                </a>
-            </div>
+            <div class="row">
+                <div class="logo">
+                    <a href="http://remoteroofing.com">
+                        <img src="https://uploads-ssl.webflow.com/5f127ac8860f158e650f06b5/5f12985a91b23596370f7a81_logo-72-dc-7-f-0-f%402x.png" height="50" >
+                    </a>
+                </div>
 
-            <div class="contact">
-                <img src="https://uploads-ssl.webflow.com/5f127ac8860f158e650f06b5/5f1297d1c3fecf36271c10a2_483947%403x.png">
-                <a href="tel:2148658818">
-                    214-865-8818
-                </a>
+                <div class="contact">
+                    <img src="https://uploads-ssl.webflow.com/5f127ac8860f158e650f06b5/5f1297d1c3fecf36271c10a2_483947%403x.png">
+                    <a href="tel:2148658818">
+                        214-865-8818
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <Menu/>
+            </div>
+            <div class="row">
+                <Title/>
             </div>
         </div>
-
     </div>
 </template>
 
+
 <script>
+    import Menu from "@/components/Menu";
+    import Title from "@/components/Title";
+
     export default {
-        name: 'Header'
+        name: 'Header',
+        components: {
+            Menu,
+            Title
+        }
+
     }
 </script>
 <style scoped>
@@ -43,5 +59,11 @@
     .container-header .content .contact {
         float: right;
         display: flex;
+    }
+</style>
+<style>
+    .row {
+        display: flex;
+        flex-direction: row;
     }
 </style>
