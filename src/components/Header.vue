@@ -1,10 +1,10 @@
 <template>
-    <div class="container-header">
+    <div class="container-header container-fluid">
         <div class="content">
-            <div class="row">
-                <div class="logo">
+            <div class="row justify-content-between">
+                <div class="">
                     <a href="http://remoteroofing.com">
-                        <img src="https://uploads-ssl.webflow.com/5f127ac8860f158e650f06b5/5f12985a91b23596370f7a81_logo-72-dc-7-f-0-f%402x.png" height="50" >
+                        <img class="logo-img" src="https://uploads-ssl.webflow.com/5f127ac8860f158e650f06b5/5f12985a91b23596370f7a81_logo-72-dc-7-f-0-f%402x.png" height="50" >
                     </a>
                 </div>
 
@@ -50,20 +50,34 @@
     .container-header .content {
         margin: auto;
         max-width: 964px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 10px;
     }
 
-    .container-header .content .logo {
-        display: inline-block;
-        float: left;
+    .logo-img {
+        width: 82px;
+        height: 30px;
+        max-height: none;
+        max-width: none;
     }
-    .container-header .content .contact {
-        float: right;
-        display: flex;
+    .container-header .content .contact a {
+        border-style: solid;
+        border-width: 0px;
+        border-color: hsla(0, 0%, 100%, 0);
+        font-family: AirbnbCerealBold, sans-serif;
+        color: #fff;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 20px;
     }
-</style>
-<style>
-    .row {
-        display: flex;
-        flex-direction: row;
+
+    .container-header .content .contact a:hover {
+        text-decoration:none;
+    }
+
+    .container-header .content .contact img {
+        max-width: 15px;
+        margin-right: 10px;
     }
 </style>
