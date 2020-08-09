@@ -19,7 +19,8 @@
                 <Menu page="Home"/>
             </div>
             <div class="row header-row">
-                <Title/>
+                <h1>Roof inspections made remote and easy</h1>
+                <span class="sub-head">Get your roof inspected remotely and connect with our trusted roofers</span>
             </div>
         </div>
     </div>
@@ -28,13 +29,11 @@
 
 <script>
     import Menu from "@/components/Menu";
-    import Title from "@/components/Title";
 
     export default {
         name: 'Header',
         components: {
             Menu,
-            Title
         }
 
     }
@@ -45,6 +44,29 @@
         src: url('https://uploads-ssl.webflow.com/5f127ac8860f158e650f06b5/5f129663d13f49d2bead206e_AirbnbCerealLight.woff') format('woff');
         font-weight: 300;
         font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'AirbnbCerealBold';
+        src: url('https://uploads-ssl.webflow.com/5f127ac8860f158e650f06b5/5f129663d13f49d2bead206e_AirbnbCerealBold.woff') format('woff');
+        font-weight: 300;
+        font-style: normal;
+    }
+
+    h1 {
+        margin-top: 40px;
+        font-family: AirbnbCerealBold, sans-serif;
+        color: #fff;
+        font-weight: 700;
+        font-size: 38px;
+    }
+
+    .sub-head {
+        font-family: AirbnbCerealLight, sans-serif;
+        color: #fff;
+        font-size: 18px;
+        line-height: 1.5em;
+        font-weight: 700;
     }
 
     /*Need to check min height*/
