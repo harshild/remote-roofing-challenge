@@ -7,7 +7,15 @@
             <img class="search-img" src="https://uploads-ssl.webflow.com/5f127ac8860f158e650f06b5/5f13618db066ca1a332318d1_home%403x.png" width="30" alt="">
           </div>
           <div class="search-input-container">
-            <input type="text" class="place-input" maxlength="256" name="place" placeholder="Enter Your Address" required autocomplete="off">
+<!--            <input type="text" class="place-input" maxlength="256" name="place" placeholder="Enter Your Address" required autocomplete="off" id="autocomplete" onfocus="geolocate()">-->
+            <vue-google-autocomplete
+                ref="address"
+                id="map"
+                classname="place-input"
+                placeholder="Please type your address"
+                country="usa"
+            >
+            </vue-google-autocomplete>
           </div>
         </div>
         <input type="submit" value="Get Inspection" class="submit-button">
@@ -17,8 +25,11 @@
 </template>
 
 <script>
+import VueGoogleAutocomplete from 'vue-google-autocomplete'
+
 export default {
-  name: "PlaceSearch"
+  name: "PlaceSearch",
+  components: {VueGoogleAutocomplete}
 }
 </script>
 
