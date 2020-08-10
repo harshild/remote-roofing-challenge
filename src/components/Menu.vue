@@ -1,10 +1,10 @@
 <template>
-    <div class="row header-row menu w-100">
+    <div class="row menu-row menu w-100">
         <div class="menu-item" v-for="(value, name) in items" :key="value" >
             <div>
                 <a :href="value">{{ name }}</a>
             </div>
-            <div v-if="page == name" class="menu-underline">
+            <div v-if="page === name" class="menu-underline">
             </div>
         </div>
     </div>
@@ -54,20 +54,22 @@
 
     .menu-underline {
         width: 50px;
-        margin-top: 10px;
+        margin-top: 9px;
         border-style: solid;
         border-width: 1px;
         border-color: #fff;
         border-radius: 1px;
         background-color: #fff;
         color: #fff;
+        line-height: 20px;
     }
 
     a:hover{
         text-decoration: none;
     }
 
-    .header-row {
+    .menu-row {
         margin: 0;
+        padding-top: 20px;
     }
 </style>
