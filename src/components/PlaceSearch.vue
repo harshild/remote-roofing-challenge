@@ -2,7 +2,7 @@
   <div class="search-container w-100">
     <form name="place-search" method="get" action="https://www.remoteroofing.com/signup-form">
       <div class="search-box d-flex flex-row align-content-center justify-content-between ">
-        <div class="search-input">
+        <div class="search-input justify-content-start align-items-center">
           <div>
             <img class="search-img" src="https://uploads-ssl.webflow.com/5f127ac8860f158e650f06b5/5f13618db066ca1a332318d1_home%403x.png" width="30" alt="">
           </div>
@@ -59,14 +59,6 @@ export default {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .search-input-container {
@@ -94,20 +86,43 @@ export default {
   border: 1px solid #3898EC;
   outline: 0;
 }
-.submit-button {
-  font-family: AirbnbCerealBook, sans-serif;
-  font-size: 16px;
-  color: white;
-  background-color: #017afe;
-  padding: 9px 15px;
-  line-height: inherit;
-  height: 45px;
-  min-width: 190px;
-  margin-right: 10px;
-  border-radius: 22px;
-  display: inline-block;
-  border: 0;
-  text-decoration: none;
-  cursor: pointer;
+
+@media screen and (min-width: 1024px){
+  .submit-button {
+    font-family: AirbnbCerealBook, sans-serif;
+    font-size: 16px;
+    color: white;
+    background-color: #017afe;
+    padding: 9px 15px;
+    line-height: inherit;
+    height: 45px;
+    min-width: 190px;
+    margin-right: 10px;
+    border-radius: 22px;
+    display: inline-block;
+    border: 0;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+@media screen and (max-width: 1024px) {
+
+  .submit-button {
+    font-family: AirbnbCerealBook, sans-serif;
+    font-size: 16px;
+    color: white;
+    background-color: #017afe;
+    padding: 9px 15px;
+    line-height: inherit;
+    height: 45px;
+    max-width: 190px;
+    min-width: auto;
+    margin-right: 10px;
+    border-radius: 22px;
+    display: inline-block;
+    border: 0;
+    text-decoration: none;
+    cursor: pointer;
+  }
 }
 </style>

@@ -19,7 +19,7 @@
         <div class="row header-row pb-0">
           <Menu page="Home"/>
         </div>
-        <div class="row header-row justify-content-start">
+        <div class="row header-row justify-content-start text-left">
           <h1>Roof inspections made remote and easy</h1>
           <span class="sub-head ">Get your roof inspected remotely and connect with our trusted roofers</span>
         </div>
@@ -29,14 +29,11 @@
 
       </div>
     </div>
-    <div class="content">
-      <div class="row header-row justify-content-center banner ">
-        <div class="banner-content row justify-content-between w-100">
-          <div class="banner-content-item justify-content-center position-relative" v-for="(image, name) in benefits" v-bind:key="name">
-            <!--                        <img :src="image" width="59" alt="" class="align-middle">-->
-            <!--                        <div class="h-100 align-middle">{{name}}</div>-->
-          </div>
-
+    <div class="row header-row justify-content-center banner hidden-sm-down">
+      <div class="banner-content row justify-content-between w-100">
+        <div class="banner-content-item justify-content-center position-relative" v-for="(image, name) in benefits" v-bind:key="name">
+          <div class="banner-content-item-img v-align d-flex"><img :src="image[0]" :width="image[1]" ></div>
+          <div class="v-align text-left">{{name}}</div>
         </div>
       </div>
     </div>
@@ -58,9 +55,9 @@ export default {
   data() {
     return {
       benefits: {
-        "Free Inspection":"https://uploads-ssl.webflow.com/5f127ac8860f158e650f06b5/5f1290e8860f155c380f1c02_3039041%403x.png",
-        "File a Claim":"https://uploads-ssl.webflow.com/5f127ac8860f158e650f06b5/5f1293b423e1bd4b2b89c278_2921571%403x.png",
-        "Replace or Repair a Roof":"https://uploads-ssl.webflow.com/5f127ac8860f158e650f06b5/5f12939072c6226dbd635684_69886%403x.png",
+        "Free Inspection":["https://uploads-ssl.webflow.com/5f127ac8860f158e650f06b5/5f1290e8860f155c380f1c02_3039041%403x.png", "80"],
+        "File a Claim":["https://uploads-ssl.webflow.com/5f127ac8860f158e650f06b5/5f1293b423e1bd4b2b89c278_2921571%403x.png", "81"],
+        "Replace or Repair a Roof":["https://uploads-ssl.webflow.com/5f127ac8860f158e650f06b5/5f12939072c6226dbd635684_69886%403x.png","130"],
       }
     }
   }
@@ -104,12 +101,6 @@ h1 {
   background-color: #f5f6f9;
 }
 
-.content {
-  margin: auto;
-  max-width: 940px;
-  padding-left: 10px;
-  padding-bottom: 140px;
-}
 
 .logo-img {
   width: 82px;
@@ -134,10 +125,6 @@ h1 {
   margin-right: 10px;
 }
 
-/*a{*/
-/*    font-family: AirbnbCerealLight, sans-serif;*/
-/*    color: #ffffff;*/
-/*}*/
 a:hover{
   text-decoration: none;
 }
@@ -146,32 +133,115 @@ a:hover{
   padding-top: 20px;
 }
 
-.banner {
-  margin-top: -30px;
-  height: 154px;
-  align-items: center;
+@media screen and (min-width: 1023px) {
+  .content {
+    margin: auto;
+    max-width: 940px;
+    padding-left: 10px;
+    padding-bottom: 140px;
+  }
+
+  .banner {
+    margin: auto;
+    max-width: 940px;
+    align-items: center;
+    padding: 0;
+  }
+
+  .banner-content {
+    margin-top: -60px;
+    height: 154px;
+    background-color: #0059bf;
+    box-shadow: 2px 2px 7px 0 rgba(10, 10, 10, 0.5);
+    border-radius: 11px;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  .banner-content-item {
+    display: flex;
+    width: 30%;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .banner-content-item img {
+    max-width: 100%;
+    margin-right: 0;
+    padding-right: 20px;
+    max-height: 60px;
+  }
+
+  .banner-content-item div {
+    font-family: AirbnbCerealBook, sans-serif;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    padding-right: 10px;
+  }
 }
 
-.banner-content {
-  background-color: #0059bf;
-  border-radius: 11px;
-  padding-right: 40px;
-  padding-left: 40px;
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+  .content {
+    margin: auto;
+    max-width: 728px;
+    padding-left: 10px;
+    padding-bottom: 140px;
+  }
+
+
+  .banner {
+    margin: auto;
+    max-width: 728px;
+    align-items: center;
+    padding: 0;
+  }
+
+  .banner-content {
+    margin-top: -60px;
+    height: 154px;
+    background-color: #0059bf;
+    box-shadow: 2px 2px 7px 0 rgba(10, 10, 10, 0.5);
+    border-radius: 11px;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  .banner-content-item {
+    display: flex;
+    width: 30%;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .banner-content-item-img {
+    width: 100px;
+  }
+  .banner-content-item-img img{
+    max-width: 100%;
+    margin-right: 0;
+    padding-right: 20px;
+    max-height: 60px;
+  }
+
+  .banner-content-item div {
+    font-family: AirbnbCerealBook, sans-serif;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    padding-right: 10px;
+  }
 }
 
-.banner-content-item {
-  display: flex;
-  width: 30%;
-  height: 130px;
-  padding-right: 20px;
-  padding-left: 20px;
-}
+@media screen and (max-width: 768px) {
 
-.banner-content-item img {
-  width: 100px;
-  margin-right: 0px;
-  padding-right: 20px;
-  max-height: 60px;
+  .content {
+    margin: auto;
+    max-width: 728px;
+    padding-left: 10px;
+    padding-bottom: 140px;
+  }
 }
 
 .v-align {
