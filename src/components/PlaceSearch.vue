@@ -7,7 +7,6 @@
             <img class="search-img" src="https://uploads-ssl.webflow.com/5f127ac8860f158e650f06b5/5f13618db066ca1a332318d1_home%403x.png" width="30" alt="">
           </div>
           <div class="search-input-container">
-<!--            <input type="text" class="place-input" maxlength="256" name="place" placeholder="Enter Your Address" required autocomplete="off" id="autocomplete" onfocus="geolocate()">-->
             <vue-google-autocomplete
                 ref="address"
                 id="map"
@@ -34,12 +33,7 @@ export default {
 </script>
 
 <style scoped>
-@font-face {
-  font-family: 'AirbnbCerealLight';
-  src: url('https://uploads-ssl.webflow.com/5f127ac8860f158e650f06b5/5f129663d13f49d2bead206e_AirbnbCerealLight.woff') format('woff');
-  font-weight: 300;
-  font-style: normal;
-}
+
 .search-container {
   margin-top: 20px;
 }
